@@ -251,7 +251,7 @@ lmdeploy chat /root/models/internlm2_5-7b-chat --cache-max-entry-count 0.4
 
 ### 2.2.2 设置**在线** kv cache int4/int8 量化
 
-自 v0.4.0 起，LMDeploy 支持在线 kv cache int4/int8 量化，量化方式为 per-head per-token 的非对称量化。此外，通过 LMDeploy 应用 kv 量化非常简单，只需要设定 `quant_policy` 和`cache-max-entry-count`参数。目前，LMDeploy 规定 `qant_policy=4` 表示 kv int4 量化，`quant_policy=8` 表示 kv int8 量化。
+自 v0.4.0 起，LMDeploy 支持在线 kv cache int4/int8 量化，量化方式为 per-head per-token 的非对称量化。此外，通过 LMDeploy 应用 kv 量化非常简单，只需要设定 `quant_policy` 和`cache-max-entry-count`参数。目前，LMDeploy 规定 `quant_policy=4` 表示 kv int4 量化，`quant_policy=8` 表示 kv int8 量化。
 
 我们通过[2.1 LMDeploy API部署InternLM2.5](#2.1)的实践为例，输入以下指令，启动API服务器。
 
